@@ -2,6 +2,8 @@
 #ways to print
 n=30
 
+print("I have "+ str(n) +" friends")
+
 txt="i have {} friends"
 print(txt.format(n))
 
