@@ -32,8 +32,10 @@ print("File Name:", file_name)
 
 #File type of a file
 def get_file_type(file_path):
-    _, file_extension = os.path.splitext(file_path)
+    fileextention = os.path.splitext(file_path)
     return file_extension.lower()
+
+
 file_type = get_file_type(file_path)
 print("File Type:", file_type)
 
