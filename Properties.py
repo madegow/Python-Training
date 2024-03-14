@@ -26,13 +26,13 @@ else:
 '''
 #Name of a file
 import os
-file_path = ("C:\\Users\\kisho\\OneDrive\\Desktop\\Python\\contents.rtf")
+file_path = ("D:\\DotNET\\NetworkScanning\\mylist.py")
 file_name = os.path.basename(file_path)
 print("File Name:", file_name)
 
 #File type of a file
 def get_file_type(file_path):
-    fileextention = os.path.splitext(file_path)
+    file_extension = os.path.splitext(file_path)[1]
     return file_extension.lower()
 
 
@@ -40,7 +40,8 @@ file_type = get_file_type(file_path)
 print("File Type:", file_type)
 
 #size,modification time and creation time
-file_path=os.stat("C:\\Users\\kisho\\OneDrive\\Desktop\\Python\\contents.rtf")
+file_path = os.stat("D:\\DotNET\\NetworkScanning\\mylist.py")
+print(type(file_path))
 print(f"size:{file_path.st_size}bytes")
 print(f"Modification time:{file_path.st_mtime}")
 print(f"creation time:{file_path.st_ctime}")
