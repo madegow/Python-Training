@@ -9,7 +9,7 @@ for element in tuple1[1:]:
    else:
     print("true")
     
-#check all elements are same 1    
+#check all elements are same 1(using all function)    
 tuple2 = (1, 1, 2, 1)
 first_element = tuple2[0]
 print(first_element)
@@ -19,7 +19,7 @@ if all_same:
 else:
     print("false")
 
-#check all elements are same 2
+#check all elements are same 2(using all count function)
 tuple2 = (1, 1, 2, 1)
 first_element = tuple2[0]
 print(first_element)
@@ -29,7 +29,7 @@ else:
     print("false")
    
     
-#swap two tuples 1
+#swap two tuples 1(using temp variable)
 a= (1, 1, 1, 1)
 b= (2, 2, 2, 2)
 print("Before")
@@ -42,7 +42,7 @@ print("After")
 print(a)
 print(b)
 
-#swap two tuples 2
+#swap two tuples 2(Unpacking)
 a= (1, 1, 1, 1)
 b= (2, 2, 2, 2)
 print("Before")
