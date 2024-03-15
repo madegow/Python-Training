@@ -19,7 +19,7 @@ if all_same:
 else:
     print("false")
     
-#swap two numbers
+#swap two tuples
 a= (1, 1, 1, 1)
 b= (2, 2, 2, 2)
 print(a)
