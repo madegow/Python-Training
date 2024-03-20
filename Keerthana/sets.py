@@ -14,7 +14,7 @@ print(set4)
 #program 3 (Get Only unique items from two sets)
 set5={1,2,3,4,5,6}
 set6={6,8,9,4,3,2}
-set7=set5.union(set6)
+set7=set5.symmetric_difference(set6)
 print(set7)
 
 #program 4 (update first set with items that doesn't exixts in second set
@@ -29,15 +29,15 @@ set10.clear()
 print(set10)
 
 #program 6 (Return a set of elements present in Set A or B, but not both)
-set8={1,2,3,4,5}
-set9={5,6,7,8,9}
-set8.symmetric_difference_update(set9)
-print(set8)
+setA={1,2,3,4,5}
+setB={5,6,7,8,9}
+setC=setA.symmetric_difference(setB)
+print(setC)
 
 #program 7(Check if two sets have any elements in common, If yes display the common elements) 
 set1={1,2,3,4}
 set2={2,4,5,6}
-set1.intersection_update(set2)
+set3=set1.intersection(set2)
 print(set1)
 
 #program 8 (Update set1 by adding items from set2, except common items)
@@ -49,7 +49,7 @@ print(set1)
 #program 9 (Remove items from set1 that are not common to both set1 and set2)
 set1={1,2,3,4,5}
 set2={3,4,5,6,7}
-set1.intersection_update(set2)
+set1.difference_update(set2)
 print(set1)
 
 
