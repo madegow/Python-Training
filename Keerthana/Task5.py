@@ -14,7 +14,7 @@ dict2={'key3':'value3'}
 dict1.update(dict2)
 print(dict1)
 
-#Program 3 (print the value of key in nested key) 
+#Program 3 (print the value of key 'h' in nested key) 
 sampleDict={'a': {'b': {'c': 'd','e': {'f':'g','h':'i'}}}}
 print(sampleDict['a']['b']['e']['h'])
 
