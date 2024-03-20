@@ -2,7 +2,10 @@
 #program 1(converting 2 lists into a directory)
 list1=['key1','key2','key3']
 list2=['value1','value2','value3']
-dict0=dict(zip(list1,list2))
+dict0=dict()
+for i in range(0,len(list2)):
+    dict0.update({list1[i]:list2[i]})
+#dict0=dict(zip(list1,list2))
 print(dict0)
 
 #program 2(merge 2 dictionaries to 1)
