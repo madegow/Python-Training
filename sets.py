@@ -17,7 +17,7 @@ set6={6,8,9,4,3,2}
 set7=set5.union(set6)
 print(set7)
 
-#program 4 (update first set with items that dont exixts in second set
+#program 4 (update first set with items that doesn't exixts in second set
 set8={1,2,3,4,5}
 set9={3,4,2,8,9}
 set8.difference_update(set9)
