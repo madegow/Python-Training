@@ -1,5 +1,5 @@
 
-#program 1(converting 2 lists into a directory)
+#program 1(converting 2 lists into a dictionary)
 list1=['key1','key2','key3']
 list2=['value1','value2','value3']
 dict0=dict()
@@ -21,13 +21,13 @@ print(sampleDict['a']['b']['e']['h'])
 #program 4 (Initialize dictionary with default values)
  dict1=dict({1,2})
 
-#program 5 (create dictionary by extracting keys from a given directory)
+#program 5 (create dictionary by extracting keys from a given dictionary)
 my_info = {"name": "Keertu","age": 23,"salary": 20000,"city": "Bangalore"}
 keys = ["name", "salary"]
 result={k:my_info[k]for k in keys}
 print(result)
 
-#program 6(delet list of keys from a directory)
+#program 6(delet list of keys from a dictionary)
 my_info = {"name": "Keertu","age": 23,"salary": 20000,"city": "Bangalore"}
 keys = ["name", "salary"]
 for k in keys:
@@ -37,8 +37,9 @@ print(my_info)
 
 #program 7 (check if value exits)
 my_info = {"name": "Keertu","age": 23,"salary": 20000,"city": "Bangalore"}
-if 23  in my_info.key():
+if 23  in my_info.value():
     print('23 present in a dict')
+
 
 #program 8(Rename key of a dictionary)
 my_info = {"name": "Keertu","age": 23,"salary": 20000,"city": "Bangalore"}
@@ -48,10 +49,14 @@ print(my_info)
 
 #program 9(get minimum key value)
 dct1={'ke1':'100','ke2':'10','ke3':'1000'}
-print(min(dct1, key=dct1.get))
+min_value=min(values)
+print(min_value)
+for k,v in dct1.items():
+    if(int(v)==min_value):
+        print(k)
 
 
-#program 10 (change value of a key in nested directory)
+#program 10 (change value of a key in nested dictionary)
 emp_info={'ABC':{'name':'123','salary':5000},'DEF':{'name':'456','salary':10000}}
 emp_info['DEF']['salary']=5000
 print(emp_info)
