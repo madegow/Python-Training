@@ -19,10 +19,7 @@ sampleDict={'a': {'b': {'c': 'd','e': {'f':'g','h':'i'}}}}
 print(sampleDict['a']['b']['e']['h'])
 
 #program 4 (Initialize dictionary with default values)
-dict1={'key4','key5'}
-dict2={'key6':'value6','key7':'value7'}
-result=dict.fromkeys(dict1,dict2)
-print(result)
+ dict1=dict({1,2})
 
 #program 5 (create dictionary by extracting keys from a given directory)
 my_info = {"name": "Keertu","age": 23,"salary": 20000,"city": "Bangalore"}
