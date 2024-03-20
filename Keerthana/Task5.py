@@ -2,6 +2,7 @@
 #program 1(converting 2 lists into a directory)
 list1=['key1','key2','key3']
 list2=['value1','value2','value3']
+list3=dict()
 dict0=dict(zip(list1,list2))
 print(dict0)
 
