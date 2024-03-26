@@ -8,6 +8,7 @@ class nvpt:
 	def __init__(self, d_gatewaytmp="192.168.0.1"):
 		self.d_gateway = d_gatewaytmp
 		self.result = list()
+		self.test_result = ['192.168.0.102', '192.168.0.105', '192.168.0.108', '192.168.0.109', '192.168.0.110', '192.168.0.111', '192.168.0.117', '192.168.0.118', '192.168.0.121', '192.168.0.125', '192.168.0.126', '192.168.0.127', '192.168.0.128', '192.168.0.129', '192.168.0.130', '192.168.0.133', '192.168.0.137', '192.168.0.139', '192.168.0.140']
 		
 	def scannetwork(self):
 		octet_list3 = self.d_gateway.split('.')[0:3]
@@ -23,22 +24,21 @@ class nvpt:
 				client_dict = {"ip" : scan_result[i][1].psrc, "mac" : scan_result[i][1].hwsrc}
 				if bool(client_dict):
 					self.result.append(client_dict['ip'])
+		print(self.result)
 		return self.result
 	
 	def scanmachine(self):
-		if not self.result:
-			self.scannetwork()
+		#if not self.result:
+		#	self.scannetwork()
+			
 		for ip in self.result:
-			print(ip)
 			scanner = nmap.PortScanner()
 			scanner.scan(ip, arguments='-sS -O')
-			print(scanner.all_hosts())
+			print("hosts ---", scanner.all_hosts())
 			for host in scanner.all_hosts():
-				print(host)
-			#for port in scanner[host]['tcp'].keys():
-			#	print('Port %s is %s' % (port, scanner[host]['tcp'][port]['state']))
+				print(scanner[host])
 			
-
+		
 
 
 
@@ -55,6 +55,3 @@ if __name__ == "__main__":
    net.scannetwork()
    net.scanmachine()
    exit(0)
-
-	
-
