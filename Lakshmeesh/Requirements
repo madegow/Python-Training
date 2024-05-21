@@ -1,3 +1,2 @@
-Modules to be installed.
-requests - for making http requests
-argparse - for parsing command-line arguments
+requests
+argparse
