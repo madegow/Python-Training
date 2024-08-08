@@ -1,0 +1,36 @@
+trigger:
+- main
+ 
+pool:
+  vmImage: 'windows-latest'
+ 
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Variables
+  $sourcePath = "C:\Users\Quadrant\Downloads\TimeSheet-Keerthana 1 - Copy (8).xlsx"
+  $destinationPath = "C:\Users\Quadrant\OneDrive - Quadrant Resource LLC\Documents\New folder"
+  $logFilePath = "C:\ScriptLogs\log.txt"
+  $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+ 
+# Create Log Directory if it doesn't exist
+  $logDirectory = Split-Path $logFilePath
+  if (-not (Test-Path -Path $logDirectory)) {
+      New-Item -ItemType Directory -Path $logDirectory
+      Write-Output "$($timestamp): Created log directory at $logDirectory"
+}
+ 
+# Create Destination Directory if it doesn't exist
+  if (-not (Test-Path -Path $destinationPath)) {
+      New-Item -ItemType Directory -Path $destinationPath
+      Write-Output "$($timestamp): Created directory at $destinationPath" | Out-File -FilePath $logFilePath -Append
+}
+ 
+# Copy files from Source to Destination
+  Copy-Item -Path $sourcePath -Destination $destinationPath
+  Write-Output "$($timestamp): Copied file from $sourcePath to $destinationPath" | Out-File -FilePath $logFilePath -Append
+ 
+# Log completion
+  Write-Output "$($timestamp): Script completed successfully." | Out-File -FilePath $logFilePath -Append
